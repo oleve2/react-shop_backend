@@ -1,0 +1,57 @@
+@url = http://localhost:7070
+
+###
+
+GET {{url}}/api/top-sales
+
+###
+
+GET {{url}}/api/categories
+
+###
+
+GET {{url}}/api/items
+
+###
+
+GET {{url}}/api/items?offset=58
+
+###
+
+GET {{url}}/api/items?q=Кеды
+
+### Черный
+
+GET {{url}}/api/items?categoryId=0&q=&offset=0
+
+###
+
+GET {{url}}/api/items/64
+
+###
+
+GET {{url}}/api/items/666
+
+###
+
+POST {{url}}/api/order
+Content-Type: application/json
+
+{
+    "owner": {
+        "phone": "+7xxxxxxxxxx",
+        "address": "Moscow City"
+    },
+    "items": [
+        {
+            "id": 66,
+            "price": 34000,
+            "count": 1
+        },
+        {
+            "id": 65,
+            "price": 7600,
+            "count": 1
+        }
+    ]
+}
